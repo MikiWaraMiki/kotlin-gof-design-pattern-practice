@@ -3,24 +3,20 @@ package iterators
 /**
  * 本棚クラス
  */
-class BookShelf(maxsize: Int) : Aggregate {
-    private val books: Array<Book?>
+class BookShelf() : Aggregate {
+    private val books: MutableList<Book> = mutableListOf()
     private var last = 0
-
-    init {
-        books = arrayOfNulls<Book>(maxsize)
-    }
 
     fun length(): Int {
         return last
     }
 
-    fun getBookAt(index: Int): Book? {
+    fun getBookAt(index: Int): Book {
         return books[index]
     }
 
     fun appendBook(book: Book) {
-        books[last] = book
+        books.add(last, book)
         last++
     }
 
