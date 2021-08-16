@@ -18,7 +18,7 @@ internal class BookShelfTest {
 
     @Test
     fun testLength() {
-        Assertions.assertEquals(bookShelf.length(), 5)
+        Assertions.assertEquals(5,bookShelf.length())
     }
 
     @Test
