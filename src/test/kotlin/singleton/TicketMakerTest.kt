@@ -7,8 +7,8 @@ class TicketMakerTest {
 
     @Test
     fun getNextNumberTest() {
-        Assertions.assertEquals(TicketMaker.getNextNumber(), 100)
-        Assertions.assertEquals(TicketMaker.getNextNumber(), 101)
-        Assertions.assertEquals(TicketMaker.getNextNumber(), 102)
+        Assertions.assertEquals(100, TicketMaker.getNextNumber())
+        Assertions.assertEquals(101, TicketMaker.getNextNumber())
+        Assertions.assertEquals(102, TicketMaker.getNextNumber())
     }
 }
