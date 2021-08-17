@@ -7,7 +7,8 @@ class IDCardFactory: Factory() {
     private val ownerList = mutableListOf<String>()
 
     override fun createProduct(aOwner: String): Product {
-        return IDCard(aOwner)
+        val aCardNumber = ownerList.size + 1
+        return IDCard(aOwner, aCardNumber)
     }
 
     override fun registerProduct(aProduct: Product) {

@@ -13,8 +13,8 @@ class IDCardFactoryTest {
         val card2 = factory.create("user2")
         val card3 = factory.create("user3")
 
-        Assertions.assertEquals("user1のカードを使います", card1.use())
-        Assertions.assertEquals("user2のカードを使います", card2.use())
-        Assertions.assertEquals("user3のカードを使います", card3.use())
+        Assertions.assertEquals("1:user1のカードを使います", card1.use())
+        Assertions.assertEquals("2:user2のカードを使います", card2.use())
+        Assertions.assertEquals("3:user3のカードを使います", card3.use())
     }
 }

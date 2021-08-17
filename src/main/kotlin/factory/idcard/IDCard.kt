@@ -5,11 +5,13 @@ import factory.framework.Product
 /**
  * IDCardクラス
  */
-class IDCard(aOwner: String): Product() {
+class IDCard(aOwner: String, aNumber: Int): Product() {
     var owner = aOwner
+        private set
+    var number = aNumber
         private set
 
     override fun use() : String {
-        return "${owner}のカードを使います"
+        return "${number.toString()}:${owner}のカードを使います"
     }
 }
