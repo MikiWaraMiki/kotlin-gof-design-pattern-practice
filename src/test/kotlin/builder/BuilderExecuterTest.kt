@@ -46,4 +46,26 @@ class BuilderExecuterTest {
             true
         )
     }
+
+    @Test
+    @DisplayName("mrkdwn形式の文面が正しく取得できること")
+    fun markDownBuilderCommand() {
+        val expected = """
+            # Greeting
+            
+            ## 朝から昼にかけて
+            - おはようございます。
+            - こんにちは。
+            
+            ## 夜に
+            - こんばんは。
+            - おやすみなさい。
+            - さようなら。
+            
+            ---
+        """.trimIndent()
+
+        val result = BuilderExecuter.execute("mrkdwn")
+        Assertions.assertEquals(expected, result)
+    }
 }

@@ -17,6 +17,12 @@ class BuilderExecuter() {
                     director.construct()
                     return htmlBuilder.getResult()
                 }
+                "mrkdwn" -> {
+                    val markDownBuilder = MarkDownBuilder()
+                    val director = Director(markDownBuilder)
+                    director.construct()
+                    return markDownBuilder.getResult()
+                }
                 else -> {
                     throw IllegalArgumentException("対応していないフォーマットです")
                 }
