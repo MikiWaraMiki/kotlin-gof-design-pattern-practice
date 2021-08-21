@@ -10,7 +10,7 @@ class ListLinkTest {
     fun testMakeHtml() {
         val listLink = ListLink("Google", "https://google.com")
         val expected = """
-            <li><a href="https://google.com">Google</a></ul>
+            <li><a href="https://google.com">Google</a></li>
             
         """.trimIndent()
 

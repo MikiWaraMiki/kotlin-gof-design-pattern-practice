@@ -4,6 +4,6 @@ import absfactory.factory.Link
 
 class ListLink(caption: String, url: String): Link(caption, url) {
     override fun makeHTML(): String {
-        return "<li><a href=\"${url}\">${caption}</a></ul>\n"
+        return "<li><a href=\"${url}\">${caption}</a></li>\n"
     }
 }
