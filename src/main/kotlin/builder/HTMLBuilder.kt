@@ -4,7 +4,7 @@ import java.io.FileWriter
 import java.io.IOException
 import java.io.PrintWriter
 
-class HTMLBuilder(): Builder() {
+class HTMLBuilder(): Builder {
     private lateinit var fileName: String
     private lateinit var writer: PrintWriter
 

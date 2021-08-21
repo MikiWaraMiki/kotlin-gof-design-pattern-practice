@@ -1,6 +1,6 @@
 package builder
 
-class TextBuilder: Builder() {
+class TextBuilder: Builder {
     private val buffer = StringBuffer()
 
     override fun makeTitle(title: String) {
