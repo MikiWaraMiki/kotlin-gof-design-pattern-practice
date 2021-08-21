@@ -1,14 +1,19 @@
 package absfactory.factory
 
+import absfactory.listfactory.ListFactory
+import kotlin.ClassCastException
+import kotlin.reflect.cast
+
 abstract class Factory {
     companion object {
         fun getFactory(className: String): Factory {
             val factory = try {
-               Class.forName(className).kotlin as Factory
+                val cls = Class.forName(className).kotlin
+                cls.objectInstance ?: cls.java.getDeclaredConstructor().newInstance()
             } catch (e: Exception) {
                 throw e
             }
-            return factory
+            return factory as Factory
         }
     }
 
