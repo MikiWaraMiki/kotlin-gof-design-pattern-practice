@@ -4,7 +4,7 @@ package bridge
  * 指定した回数表示するクラス
  * 機能のクラス階層
  */
-class CountDisplay(impl: DisplayImpl): Display(impl) {
+open class CountDisplay(impl: DisplayImpl): Display(impl) {
 
     fun multiDisplay(time: Int): String {
         var result = ""
