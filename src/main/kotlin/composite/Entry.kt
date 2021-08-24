@@ -8,7 +8,7 @@ abstract class Entry {
     abstract fun printList(prefix: String): String
 
     @Throws(FileTreatmentException::class)
-    fun addEntry(entry: Entry) {
+    open fun addEntry(entry: Entry) {
         throw FileTreatmentException("")
     }
 
