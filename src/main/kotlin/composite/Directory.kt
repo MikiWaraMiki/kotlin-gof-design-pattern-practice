@@ -21,11 +21,13 @@ class Directory(
 
 
     override fun printList(prefix: String): String {
-        var result = ""
         val prefix = "${prefix}/${name}"
+        var result = prefix + "\n"
 
         directory.forEach { entry ->
-            result += entry.printList(prefix) + "\n"
+            result += entry.printList(prefix)
+            if (result.last() != '\n')
+                result += "\n"
         }
 
         return result
